@@ -1,0 +1,104 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Web3.js LIBRARY -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.1/web3.min.js"
+      integrity="sha512-GKw4QT/RccGJIwQxY3MhyiQ5pHrhQ8SuKFEafV+WcpOvtz7iYFQuQGFCvmGlHLctJTe8KrWU1FqvF7VOkEAJtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="index.css" />
+    <title>東東大學WiFi 登入</title>
+    <style>
+      body {
+        background-color: #800000;
+        font-family: Arial, sans-serif;
+      }
+      .page-header {
+        background-color: #800000;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 5px solid #ffffff;
+        margin-bottom: 20px;
+      }
+      .login-section, .dashboard-section {
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 20px auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+      }
+      .login-btn, .logout-btn {
+        background-color: #800000;
+        color: white;
+        border: none;
+        padding: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+      }
+      .login-btn:hover, .logout-btn:hover {
+        background-color: #600000;
+      }
+      .instruction {
+        text-align: center;
+        margin-top: 20px;
+        color: #800000;
+      }
+      .wallet-status {
+        font-size: 36px;
+        color: #800000;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .wallet-address-heading {
+        color: #333;
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">東東大學網路認證</header>
+
+    <!-- LOGIN SECTION -->
+    <section class="login-section">
+      <button class="login-btn">🔓 登入東東大學WiFi</button>
+      <span class="instruction">
+        請確認已安裝支援以太坊或者EVM的錢包，例如MetaMask(小狐狸)錢包
+      </span>
+    </section>
+
+    <!-- DASHBOARD SECTION -->
+    <section class="dashboard-section" style="display: none;">
+      <h2 class="wallet-status">東東大學WiFi登入成功!!</h2>
+      <h3 class="wallet-address-heading">
+        登入的DID是：
+        <span class="wallet-address"></span>
+      </h3>
+      <h3 class="wallet-balance-heading" style="display: none;">
+       ETH Balance:
+        <span class="wallet-balance"></span>
+      </h3>
+      <button class="logout-btn">🔐 登出東東大學WiFi</button>
+    </section>
+  </body>
+
+  <!-- SCRIPT -->
+  <script src="./index.js"></script>
+</html>
